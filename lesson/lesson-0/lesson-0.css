@@ -8,26 +8,51 @@ body {
     background-color: #eee;
 }
 
+h1 {
+    margin: 10px;
+}
+
 .container {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .flashcard {
     border: 1px solid #000;
     border-radius: 10px;
-    width: 100%;
     max-width: 300px;
     height: 200px;
-    margin: 10px;
-    display: inline-block;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 33.33%;
 }
 
+.flashcard-content {
+    height: 160px;
+}
+
+.front, .back {
+    margin: 10px;
+}
+
+.flip-btn {
+    margin-left: 10px;
+    margin-bottom: 0;
+
+}
 .front {
     display: block;
-    margin: 10px;
 }
 
 .back {
     display: none;
-    margin: 10px;
+}
+
+.back > p {
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

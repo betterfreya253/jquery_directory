@@ -9,7 +9,25 @@ $(document).ready(function() {
         let questionNumber = index + 1;
         let questionTxt = $(this).text();
         $(this).text("Question " + questionNumber + ":")
-    })
+    });
+    function changeColor() {
+        let isColorChanged = false;
+        document.getElementById("changeColorBtn").addEventListener("click", function() {
+          var paragraphs = document.getElementsByTagName("p");
+          if (!isColorChanged) {
+            for (var i = 0; i < paragraphs.length; i++) {
+              paragraphs[i].style.color = "red";
+            }
+            isColorChanged = true;
+          } else {
+            for (var i = 0; i < paragraphs.length; i++) {
+              paragraphs[i].style.color = "";
+            }
+            isColorChanged = false;
+          }
+        });
+      }
+    changeColor();
 });
 
 function flipFunc() {

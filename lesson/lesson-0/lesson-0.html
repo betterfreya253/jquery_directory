@@ -10,8 +10,8 @@
         <link href="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/themes/prism.css" rel="stylesheet" />
     </head>
     <body>
-        <div class="theory-section">
-            <h1>jQuery Introduction and Installation</h1>
+        <div class="part-section">
+            <h1>Part 1: jQuery Introduction and Installation</h1>
             <div class="container">
                 <div class="flashcard">
                     <div class="flashcard-content">
@@ -117,6 +117,35 @@
                 </div>
             </div>
         </div>
-        </body>
-        <script src="lesson-0.js"></script>
-        </html>
+        <div class="part-section">
+            <h1>Part 2: jQuery Basics and Selectors</h1>
+            <div class="example">
+                <h3>Selecting elements by ID: $("#id")</h3>
+                <p>Click the button to change the color of all p tag.</p>
+                <button id="changeColorBtn">Change Color</button>
+            </div>
+            <div class="example-jq-code">
+                <pre class="language-javascript"><code>
+                    function changeColor() {
+                        let isColorChanged = false;
+                        $("#changeColorBtn").click(function() {
+                                if (!isColorChanged) {
+                                    $('p').css('color', 'red');
+                                    isColorChanged = true;
+                                } else {
+                                    $('p').css('color', '');
+                                    isColorChanged = false;
+                                }
+                            })
+                    }
+                </code></pre>
+            </div>
+            <div class="example-js-code">
+                <pre class="language-javascript"><code>
+                    
+                </code></pre>
+            </div>
+        </div>
+    </body>
+<script src="lesson-0.js"></script>
+</html>

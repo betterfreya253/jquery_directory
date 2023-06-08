@@ -11,22 +11,22 @@ $(document).ready(function() {
         $(this).text("Question " + questionNumber + ":")
     });
     function changeColor() {
-        let isColorChanged = false;
-        document.getElementById("changeColorBtn").addEventListener("click", function() {
-          var paragraphs = document.getElementsByTagName("p");
-          if (!isColorChanged) {
-            for (var i = 0; i < paragraphs.length; i++) {
-              paragraphs[i].style.color = "red";
-            }
-            isColorChanged = true;
-          } else {
-            for (var i = 0; i < paragraphs.length; i++) {
-              paragraphs[i].style.color = "";
-            }
-            isColorChanged = false;
-          }
-        });
-      }
+      let isColorChanged = false;
+      document.getElementById("changeColorBtn").addEventListener("click", function() {
+        let pTags = document.getElementsByTagName("p");
+        if (!isColorChanged) {
+          for (let i=0; i < pTags.length; i++) {
+            pTags[i].style.color = "red";
+          };
+          isColorChanged=true;
+        } else {
+          for (let i=0; i < pTags.length; i++) {
+            pTags[i].style.color = "";
+          };
+          isColorChanged=false;
+        }
+      })
+    };
     changeColor();
 });
 
